@@ -7,11 +7,13 @@ const DiscoverAmazingMovies = ({ moviesPromise }) => {
   const movies = use(moviesPromise);
 
   return (
-    <section className="bg-linear-to-t from-[#070f22] to-[#040915] py-12">
+    <section className="bg-linear-to-t from-[#070f22] to-[#040915] px-4 py-12">
       <div className="container mx-auto text-white">
         <div className="mb-6 flex items-center justify-between">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold">Discover Amazing Movies</h2>
+            <h2 className="text-2xl font-bold md:text-3xl">
+              Discover Amazing Movies
+            </h2>
 
             <p className="max-w-120 text-gray-400">
               From thrilling adventures to heartwarming dramas, find movies that
@@ -21,7 +23,7 @@ const DiscoverAmazingMovies = ({ moviesPromise }) => {
 
           <Link
             to="/movies"
-            className="group flex cursor-pointer items-center gap-2 text-[#7458f8] outline-none"
+            className="group hidden cursor-pointer items-center gap-2 text-[#7458f8] outline-none md:flex"
           >
             View All Movies{" "}
             <FaArrowRight className="transition-transform group-hover:translate-x-1" />

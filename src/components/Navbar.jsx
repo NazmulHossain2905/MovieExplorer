@@ -19,14 +19,14 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 border-b border-b-[#1e3665] bg-[#060d1b] py-1 backdrop-blur-2xl">
+    <nav className="sticky top-0 z-50 border-b border-b-[#1e3665] bg-[#060d1b] px-4 py-4 backdrop-blur-2xl md:py-1">
       <div className="container mx-auto flex items-center justify-between text-white">
         <h1 className="flex items-center text-xl font-bold">
           <SiThemoviedatabase className="mr-2 text-2xl" /> Movie
           <span className="text-yellow-400">Explorer</span>
         </h1>
 
-        <ul className="flex items-center gap-6">
+        <ul className="hidden items-center gap-6 md:flex">
           {links.map((link) => (
             <li key={link.path}>
               <NavLink

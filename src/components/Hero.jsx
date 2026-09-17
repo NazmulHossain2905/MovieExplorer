@@ -9,14 +9,14 @@ const Hero = () => {
       style={{
         backgroundImage: `linear-gradient(45deg, rgba(0,0,0,0.7) 30%, transparent) ,url(${HeroBGImage})`,
       }}
-      className="flex min-h-[80vh] items-center justify-center bg-cover bg-center bg-no-repeat"
+      className="flex min-h-[80vh] items-center justify-center bg-cover bg-center bg-no-repeat px-4"
     >
-      <div className="container mx-auto flex flex-col items-start gap-8">
+      <div className="container mx-auto flex flex-col items-start gap-8 text-center md:text-left">
         <div className="space-y-5">
           <span className="inline-block text-xs font-bold tracking-widest text-[#ac83e4] uppercase">
             Discover • Explore • Enjoy
           </span>
-          <h1 className="text-7xl font-black text-white">
+          <h1 className="text-5xl font-black text-white md:text-7xl">
             Your Next Favorite <br />
             <span className="text-[#7866f2]">Movie</span> Awaits
           </h1>
@@ -31,7 +31,7 @@ const Hero = () => {
 
         <Link
           to={"/movies"}
-          className="group mt-3 flex cursor-pointer items-center gap-3 rounded-full bg-linear-to-r from-yellow-500 to-yellow-300 px-5 py-3 font-bold text-black"
+          className="group mx-auto mt-3 flex cursor-pointer items-center gap-3 rounded-full bg-linear-to-r from-yellow-500 to-yellow-300 px-5 py-3 font-bold text-black md:mx-0"
         >
           <IoSearch className="text-2xl" /> Explore Movies{" "}
           <FaArrowRight className="transition-transform group-hover:translate-x-1" />

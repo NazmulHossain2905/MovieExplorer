@@ -19,10 +19,10 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t-2 border-t-gray-800 bg-[#070e1b] py-5">
-      <div className="container mx-auto flex items-center justify-between text-white">
+    <footer className="border-t-2 border-t-gray-800 bg-[#070e1b] px-4 py-5">
+      <div className="container mx-auto flex flex-col items-center justify-between gap-4 text-white md:flex-row">
         <div>
-          <h3 className="flex items-center text-lg font-bold">
+          <h3 className="flex items-center justify-center text-lg font-bold md:justify-start">
             <SiThemoviedatabase className="mr-2 text-xl" /> Movie
             <span className="text-yellow-400">Explorer</span>
           </h3>

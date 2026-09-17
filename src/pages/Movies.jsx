@@ -30,10 +30,10 @@ const Movies = () => {
   );
 
   return (
-    <div>
+    <>
       <Navbar />
 
-      <div className="container mx-auto pt-6 pb-12 text-white">
+      <div className="container mx-auto px-4 pt-6 pb-12 text-white">
         <div className="mb-6 space-y-4">
           <div className="space-y-1">
             <h2 className="text-3xl font-bold">Browse Movies</h2>
@@ -45,10 +45,7 @@ const Movies = () => {
           </div>
 
           <div className="flex items-center justify-between">
-            <form
-              // onSubmit={handleOnSubmit}
-              className="flex w-130 items-center gap-4 rounded-full border border-gray-700 bg-[#0c172f] px-4 py-2"
-            >
+            <form className="flex w-130 items-center gap-4 rounded-full border border-gray-700 bg-[#0c172f] px-4 py-2">
               <FaSearch className="text-gray-500" />
               <input
                 type="text"
@@ -57,13 +54,9 @@ const Movies = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
-
-              <span className="rounded bg-gray-800 px-2 py-0.5 font-mono text-xs text-gray-400">
-                Press Enter
-              </span>
             </form>
 
-            <span className="text-sm font-medium text-gray-400">
+            <span className="hidden text-sm font-medium text-gray-400 md:block">
               Total Movies: {filteredMovies.length}
             </span>
           </div>
@@ -77,7 +70,7 @@ const Movies = () => {
           </h2>
         )}
       </div>
-    </div>
+    </>
   );
 };
 

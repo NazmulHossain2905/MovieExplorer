@@ -5,7 +5,7 @@ const MovieDetailsModal = ({ open, onClose, backdropBlur = true, movie }) => {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-9999 flex items-center justify-center">
+    <div className="fixed inset-0 z-9999 flex justify-center md:items-center">
       {/* Backdrop */}
       <div
         className={`absolute inset-0 bg-black/50 ${
@@ -15,16 +15,16 @@ const MovieDetailsModal = ({ open, onClose, backdropBlur = true, movie }) => {
       />
 
       {/* Modal */}
-      <div className="rounded-xlshadow-2xl relative z-10 w-full max-w-5xl">
-        <div className="flex gap-4 overflow-hidden rounded-2xl border-2 border-gray-800 bg-[#0a1123]">
+      <div className="relative z-10 w-full max-w-5xl rounded-xl shadow-2xl md:mx-4">
+        <div className="flex h-screen flex-col gap-4 overflow-y-scroll rounded-none border-0 border-gray-800 bg-[#0a1123] md:h-auto md:flex-row md:overflow-hidden md:rounded-2xl md:border-2">
           <span
             onClick={onClose}
-            className="absolute top-2 right-2 flex size-8 cursor-pointer items-center justify-center rounded transition-colors hover:bg-gray-800"
+            className="absolute top-2 right-2 z-10 flex size-8 cursor-pointer items-center justify-center rounded bg-gray-800 transition-colors md:bg-transparent md:hover:bg-gray-800"
           >
             <IoMdClose />
           </span>
 
-          <div className="relative h-150 w-100 overflow-hidden">
+          <div className="relative min-h-120 w-full overflow-hidden md:min-h-150 md:w-100">
             <img
               src={movie?.image?.medium}
               alt={movie?.name}
@@ -71,7 +71,7 @@ const MovieDetailsModal = ({ open, onClose, backdropBlur = true, movie }) => {
                 </span>
               </div>
 
-              <div className="space-y-1">
+              <div className="mb-20 space-y-1 md:mb-0">
                 <h5 className="font-bold">Overview</h5>
                 <div
                   dangerouslySetInnerHTML={{
