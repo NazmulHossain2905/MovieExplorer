@@ -1,6 +1,7 @@
 import { FaStar } from "react-icons/fa6";
 import MovieDetailsModal from "./MovieDetailsModal";
 import { useState } from "react";
+import { LuCalendarCheck } from "react-icons/lu";
 
 const MovieCard = ({ movie }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,11 +25,14 @@ const MovieCard = ({ movie }) => {
           <div className="space-y-2">
             <h4 className="text-lg font-bold">{movie?.name}</h4>
             <div className="flex items-center justify-between">
-              <span className="flex items-center gap-1 text-xs">
-                <FaStar className="text-yellow-500" /> {movie?.rating?.average}
-              </span>
-              <span className="inline-block text-xs text-gray-400">
-                {movie?.premiered}
+              {movie?.rating?.average && (
+                <span className="flex items-center gap-1 text-xs">
+                  <FaStar className="text-yellow-500" />{" "}
+                  {movie?.rating?.average}
+                </span>
+              )}
+              <span className="flex items-center gap-1 text-xs text-gray-400">
+                <LuCalendarCheck className="mb-0.5" /> {movie?.premiered}
               </span>
             </div>
           </div>
