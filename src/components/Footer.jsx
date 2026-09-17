@@ -32,10 +32,12 @@ const Footer = () => {
           </span>
         </div>
 
-        <ul className="flex gap-4">
+        <ul className="flex gap-5">
           {socialLinks.map((link) => (
             <li key={link.path}>
-              <a href={link.path}>{link.icon}</a>
+              <a className="text-gray-400" href={link.path}>
+                {link.icon}
+              </a>
             </li>
           ))}
         </ul>

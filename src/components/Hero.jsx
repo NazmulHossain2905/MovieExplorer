@@ -1,6 +1,7 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
 import HeroBGImage from "../assets/hero-bg.png";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
@@ -8,7 +9,7 @@ const Hero = () => {
       style={{
         backgroundImage: `linear-gradient(45deg, rgba(0,0,0,0.7) 30%, transparent) ,url(${HeroBGImage})`,
       }}
-      className="flex min-h-[90vh] items-center justify-center bg-cover bg-center bg-no-repeat"
+      className="flex min-h-[80vh] items-center justify-center bg-cover bg-center bg-no-repeat"
     >
       <div className="container mx-auto flex flex-col items-start gap-8">
         <div className="space-y-5">
@@ -28,10 +29,13 @@ const Hero = () => {
           -- all in one place.
         </p>
 
-        <button className="group mt-3 flex cursor-pointer items-center gap-3 rounded-full bg-linear-to-r from-yellow-500 to-yellow-300 px-5 py-3 font-bold">
+        <Link
+          to={"/movies"}
+          className="group mt-3 flex cursor-pointer items-center gap-3 rounded-full bg-linear-to-r from-yellow-500 to-yellow-300 px-5 py-3 font-bold text-black"
+        >
           <IoSearch className="text-2xl" /> Explore Movies{" "}
           <FaArrowRight className="transition-transform group-hover:translate-x-1" />
-        </button>
+        </Link>
       </div>
     </header>
   );

@@ -1,29 +1,66 @@
 import { FaStar } from "react-icons/fa6";
-import IMG from "../assets/hero-bg.png";
+import MovieDetailsModal from "./MovieDetailsModal";
+import { useState } from "react";
 
-const MovieCard = () => {
+const MovieCard = ({ movie }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="group overflow-hidden rounded-2xl border-2 border-gray-800 bg-[#0a1123] transition-transform hover:-translate-y-1.5">
-      <img
-        src={IMG}
-        alt=""
-        className="h-50 w-full object-cover object-center transition-transform group-hover:scale-105"
-      />
+    <>
+      <div className="group overflow-hidden rounded-2xl border-2 border-gray-800 bg-[#0a1123] transition-transform">
+        <div className="relative h-125 w-full overflow-hidden">
+          <img
+            src={movie.image?.medium}
+            alt={movie.name}
+            className="h-full w-full object-cover object-center transition-transform group-hover:scale-105"
+          />
 
-      <div className="space-y-4 p-4">
-        <div>
-          <h4 className="font-bold">The Last Horizon</h4>
-          <span className="inline-block text-xs text-gray-400">2024</span>
-          <p className="mt-1 flex items-center gap-1 text-xs">
-            <FaStar className="text-yellow-500" /> 8.4
-          </p>
+          <span className="absolute bottom-3 left-3 rounded-full bg-[#00000030] px-2.5 py-1 text-xs font-medium backdrop-blur-md">
+            {movie?.language}
+          </span>
         </div>
 
-        <button className="w-full cursor-pointer rounded-full border-2 border-gray-800 bg-[#0e1933] py-1.5 text-xs font-medium text-slate-300 transition-transform hover:scale-105">
-          See Details
-        </button>
+        <div className="space-y-4 p-4">
+          <div className="space-y-2">
+            <h4 className="text-lg font-bold">{movie?.name}</h4>
+            <div className="flex items-center justify-between">
+              <span className="flex items-center gap-1 text-xs">
+                <FaStar className="text-yellow-500" /> {movie?.rating?.average}
+              </span>
+              <span className="inline-block text-xs text-gray-400">
+                {movie?.premiered}
+              </span>
+            </div>
+          </div>
+
+          <ul className="flex gap-1.5">
+            {movie?.genres?.map((item) => (
+              <li
+                key={item}
+                className="rounded-full bg-gray-800 px-2 py-0.5 font-mono text-xs text-gray-400"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <button
+            onClick={() => setIsOpen(true)}
+            className="w-full cursor-pointer rounded-full border-2 border-gray-800 bg-[#0e1933] py-2 text-xs font-medium text-slate-300 transition-transform hover:scale-105"
+          >
+            See Details
+          </button>
+        </div>
       </div>
-    </div>
+
+      {/* Movie details */}
+
+      <MovieDetailsModal
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        movie={movie}
+      />
+    </>
   );
 };
 

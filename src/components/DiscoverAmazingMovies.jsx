@@ -1,7 +1,11 @@
+import { use } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import MovieGrid from "./MovieGrid";
+import { Link } from "react-router";
 
-const DiscoverAmazingMovies = () => {
+const DiscoverAmazingMovies = ({ moviesPromise }) => {
+  const movies = use(moviesPromise);
+
   return (
     <section className="bg-linear-to-t from-[#070f22] to-[#040915] py-12">
       <div className="container mx-auto text-white">
@@ -15,13 +19,16 @@ const DiscoverAmazingMovies = () => {
             </p>
           </div>
 
-          <button className="group flex cursor-pointer items-center gap-2 text-[#7458f8] outline-none">
+          <Link
+            to="/movies"
+            className="group flex cursor-pointer items-center gap-2 text-[#7458f8] outline-none"
+          >
             View All Movies{" "}
             <FaArrowRight className="transition-transform group-hover:translate-x-1" />
-          </button>
+          </Link>
         </div>
 
-        <MovieGrid movies={Array(4).fill(null)} />
+        <MovieGrid movies={movies} />
       </div>
     </section>
   );

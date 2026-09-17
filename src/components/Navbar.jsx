@@ -32,7 +32,7 @@ const Navbar = () => {
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
-                  `hover:text-white" inline-block border-b-2 py-5 text-gray-400 ${isActive ? "border-b-yellow-500" : "border-b-transparent"}`
+                  `hover:text-white" inline-block border-b-2 py-5 ${isActive ? "border-b-yellow-500 text-white" : "border-b-transparent text-gray-400"}`
                 }
               >
                 {link.label}
