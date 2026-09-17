@@ -11,16 +11,12 @@ const links = [
     path: "/movies",
     label: "Movies",
   },
-  {
-    path: "/about",
-    label: "About",
-  },
 ];
 
 const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 border-b border-b-[#1e3665] bg-[#060d1b] px-4 py-4 backdrop-blur-2xl md:py-1">
-      <div className="container mx-auto flex items-center justify-between text-white">
+    <nav className="sticky top-0 z-50 border-b border-b-[#1e3665] bg-[#060d1b] py-4 backdrop-blur-2xl md:py-1">
+      <div className="container mx-auto flex items-center justify-between px-4 text-white">
         <h1 className="flex items-center text-xl font-bold">
           <SiThemoviedatabase className="mr-2 text-2xl" /> Movie
           <span className="text-yellow-400">Explorer</span>
