@@ -21,7 +21,7 @@ const Hero = () => {
           </h1>
         </div>
 
-        <p className="max-w-[500px] text-lg font-medium text-gray-400">
+        <p className="max-w-125 text-lg font-medium text-gray-400">
           Explore a world of amazing movies. Discover new releases, read
           detailed information and find your next favorite film
           <br />

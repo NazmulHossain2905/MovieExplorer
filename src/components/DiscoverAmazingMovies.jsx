@@ -1,0 +1,30 @@
+import { FaArrowRight } from "react-icons/fa6";
+import MovieGrid from "./MovieGrid";
+
+const DiscoverAmazingMovies = () => {
+  return (
+    <section className="bg-[#070d1a] py-12">
+      <div className="container mx-auto text-white">
+        <div className="mb-6 flex items-center justify-between">
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold">Discover Amazing Movies</h2>
+
+            <p className="max-w-120 text-gray-400">
+              From thrilling adventures to heartwarming dramas, find movies that
+              match your mood.
+            </p>
+          </div>
+
+          <button className="group flex cursor-pointer items-center gap-2 text-[#7458f8] outline-none">
+            View All Movies{" "}
+            <FaArrowRight className="transition-transform group-hover:translate-x-1" />
+          </button>
+        </div>
+
+        <MovieGrid />
+      </div>
+    </section>
+  );
+};
+
+export default DiscoverAmazingMovies;

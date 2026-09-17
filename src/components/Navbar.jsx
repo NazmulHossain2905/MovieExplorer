@@ -18,7 +18,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-950 backdrop:backdrop-blur-2xl">
+    <nav className="sticky top-0 border-b border-b-[#1e3665] bg-[#060d1b] py-1 backdrop-blur-2xl">
       <div className="container mx-auto flex items-center justify-between text-white">
         <h1 className="flex items-center text-xl font-bold">
           <SiThemoviedatabase className="mr-2 text-2xl" /> Movie
@@ -30,7 +30,7 @@ const Navbar = () => {
             <li key={link.path}>
               <a
                 href={link.path}
-                className="inline-block py-5 text-gray-300 hover:text-white"
+                className="inline-block py-5 text-gray-400 hover:text-white"
               >
                 {link.label}
               </a>
@@ -38,8 +38,9 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className="flex cursor-pointer items-center gap-2 rounded-xl bg-linear-to-r from-violet-500 to-blue-500 px-4 py-2.5 text-sm font-bold">
-          Browse Movies <FaArrowRight />
+        <button className="group flex cursor-pointer items-center gap-2 rounded-xl bg-linear-to-r from-violet-500 to-blue-500 px-4 py-2.5 text-sm font-bold">
+          Browse Movies{" "}
+          <FaArrowRight className="transition-transform group-hover:translate-x-1" />
         </button>
       </div>
     </nav>
