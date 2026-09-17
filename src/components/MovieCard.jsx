@@ -7,10 +7,10 @@ const MovieCard = () => {
       <img
         src={IMG}
         alt=""
-        className="h-50 object-cover object-center transition-transform group-hover:scale-105"
+        className="h-50 w-full object-cover object-center transition-transform group-hover:scale-105"
       />
 
-      <div className="space-y-3 p-4">
+      <div className="space-y-4 p-4">
         <div>
           <h4 className="font-bold">The Last Horizon</h4>
           <span className="inline-block text-xs text-gray-400">2024</span>
@@ -19,7 +19,7 @@ const MovieCard = () => {
           </p>
         </div>
 
-        <button className="w-full cursor-pointer rounded-full border-2 border-gray-800 bg-[#0e1933] py-1 text-xs font-medium text-slate-300 transition-transform hover:scale-105">
+        <button className="w-full cursor-pointer rounded-full border-2 border-gray-800 bg-[#0e1933] py-1.5 text-xs font-medium text-slate-300 transition-transform hover:scale-105">
           See Details
         </button>
       </div>

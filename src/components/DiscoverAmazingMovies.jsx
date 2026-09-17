@@ -3,7 +3,7 @@ import MovieGrid from "./MovieGrid";
 
 const DiscoverAmazingMovies = () => {
   return (
-    <section className="bg-[#070d1a] py-12">
+    <section className="bg-linear-to-t from-[#070f22] to-[#040915] py-12">
       <div className="container mx-auto text-white">
         <div className="mb-6 flex items-center justify-between">
           <div className="space-y-2">
@@ -21,7 +21,7 @@ const DiscoverAmazingMovies = () => {
           </button>
         </div>
 
-        <MovieGrid />
+        <MovieGrid movies={Array(4).fill(null)} />
       </div>
     </section>
   );

@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 @import "tailwindcss";
-@plugin "daisyui";
 
 @theme {
   /* Make it default font */
   --font-sans: "Manrope", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050c17] text-white;
+  }
 }

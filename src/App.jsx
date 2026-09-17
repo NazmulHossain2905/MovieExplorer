@@ -1,14 +1,15 @@
-import Hero from "./components/Hero";
-import Navbar from "./components/Navbar";
-import DiscoverAmazingMovies from "./components/DiscoverAmazingMovies";
+import { Route, Routes } from "react-router";
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
+import About from "./pages/About";
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <DiscoverAmazingMovies />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/movies" element={<Movies />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
   );
 };
 
