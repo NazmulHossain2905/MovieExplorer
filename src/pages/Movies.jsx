@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import MovieGrid from "../components/MovieGrid";
 import { FaSearch } from "react-icons/fa";
 import { useEffect, useState } from "react";
@@ -71,6 +72,8 @@ const Movies = () => {
           </h2>
         )}
       </div>
+
+      <Footer />
     </>
   );
 };
